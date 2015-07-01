@@ -354,7 +354,7 @@ void medHomepageArea::initPage()
     QList<medWorkspaceFactory::Details*> workspaceDetails = medWorkspaceFactory::instance()->workspaceDetailsSortedByName();
     QVBoxLayout * workspaceButtonsLayout = new QVBoxLayout;
     workspaceButtonsLayout->setSpacing ( 10 );
-    QLabel * workspaceLabel = new QLabel ( "<H2>Available workspaces</H2>" );
+    QLabel * workspaceLabel = new QLabel ( "<b>Available workspaces</b>" );
     workspaceLabel->setTextFormat(Qt::RichText);
     workspaceLabel->setAlignment(Qt::AlignHCenter);
     workspaceButtonsLayout->addWidget ( workspaceLabel );

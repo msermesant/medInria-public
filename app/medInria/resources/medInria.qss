@@ -15,25 +15,30 @@
 /*******************************************************************************
     COLOR
  *******************************************************************************/
-$GREY00     = #191919;
-$GREY01     = #303030;
-$GREY02     = #383838;
-$GREY03     = #424242;
-$GREY04     = #464646;
-$GREY05     = #505050;
-$GREY06     = #606060;
-$GREY07     = #707070;
-$GREY08     = #808080;
-$GREY09     = #909090;
-$GREY10     = #A0A0A0;
-$GREY11     = #C0C0C0;
 
-$GREEN      = #64FF32;
-$RED        = #FF3333;
-$YELLOW     = #FFFF99;
+$HUE        = 220;
+$SATURATION = 10;
 
-$HIGHLIGHT_COLOR = #FF8833;
+$GREY10     = hsv($HUE,$SATURATION,0);
+$GREY09     = hsv($HUE,$SATURATION,10);
+$GREY08     = hsv($HUE,$SATURATION,20);
+$GREY07     = hsv($HUE,$SATURATION,30);
+$GREY06     = hsv($HUE,$SATURATION,40);
+$GREY05     = hsv($HUE,$SATURATION,50);
+$GREY04     = hsv($HUE,$SATURATION,60);
+$GREY03     = hsv($HUE,$SATURATION,70);
+$GREY02     = hsv($HUE,$SATURATION,80);
+$GREY01     = hsv($HUE,$SATURATION,90);
+$GREY00     = hsv($HUE,$SATURATION,100);
 
+$GREY11            = #e3ecf1; /*texts*/
+$HIGHLIGHT_COLOR   = #ED6639; /*highlight*/
+$DARKGRAY          = #2a416f; /*toolbox headers*/
+$MEDINRIA_DARKGRAY = #39548a; /*toolbox headers*/
+
+$ORANGE     = #fc875f; /*only in tooltip background*/
+$GREEN      = #64FF32; /*only in success progress bar*/
+$RED        = #FF3333; /*only in failure progress bar*/
 
 /*******************************************************************************
     BACKGROUND
