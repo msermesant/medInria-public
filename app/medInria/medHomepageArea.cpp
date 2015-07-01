@@ -128,27 +128,26 @@ medHomepageArea::medHomepageArea ( QWidget * parent ) : QWidget ( parent ), d ( 
     QLabel * medInriaLabel = new QLabel ( this );
     QPixmap medLogo( ":pixmaps/medInria-logo-homepage.png" );
     medInriaLabel->setPixmap ( medLogo );
-//     QLabel * textLabel = new QLabel;
 
-    QTextEdit * textEdit = new QTextEdit(this);
-    textEdit->setHtml ( tr("<b>medInria</b> is a multi-platform medical image "
-                           "processing and visualization software, "
-                           "and it's <b>free</b>. Through an intuitive user "
-                           "interface, <b>medInria</b> offers from standard "
-                           "to cutting-edge processing functionalities for "
-                           "your medical images such as 2D/3D/4D image "
-                           "visualization, image registration, or diffusion "
-                           "MR processing and tractography." ));
-    textEdit->setReadOnly ( true );
-    textEdit->setFocusPolicy ( Qt::NoFocus );
-    textEdit->setMaximumHeight ( 200 );
+    QLabel * textLabel = new QLabel("<b>medInria</b> is a multi-platform medical image processing and visualization software, and it's <b>free</b>. Through an intuitive user interface, <b>medInria</b> offers from standard to cutting-edge processing functionalities for your medical images such as 2D/3D/4D image visualization, image registration, or diffusion MR processing and tractography.");
+    textLabel->setTextFormat(Qt::RichText);
+    textLabel->setWordWrap(true);
+    textLabel->setAlignment(Qt::AlignLeft);
+    textLabel->setFocusPolicy ( Qt::NoFocus );
+
+    QLabel * medInriaImage = new QLabel ( this );
+    QPixmap medImage( ":brain.png" );
+    medImage = medImage.scaledToHeight(300);
+    medInriaImage->setPixmap ( medImage );
+    medInriaImage->setAlignment(Qt::AlignRight);
+
     infoLayout->insertWidget ( 0,medInriaLabel );
-    infoLayout->insertWidget ( 1, textEdit );
-    infoLayout->addStretch();
+    infoLayout->insertWidget ( 1, textLabel );
+    infoLayout->insertWidget ( 2, medInriaImage );
 
     //no need to set the layout, the infoWidget is the parent of the layout already.
-//    d->infoWidget->setLayout ( infoLayout );
-    d->infoWidget->setMaximumHeight ( medInriaLabel->height() + textEdit->height() );
+    //d->infoWidget->setLayout ( infoLayout );
+    d->infoWidget->setMaximumHeight ( medInriaLabel->height() + textLabel->height() + medInriaImage->height());
 
     //About widget
     QVBoxLayout * aboutLayout = new QVBoxLayout(d->aboutWidget);
@@ -355,7 +354,7 @@ void medHomepageArea::initPage()
     QList<medWorkspaceFactory::Details*> workspaceDetails = medWorkspaceFactory::instance()->workspaceDetailsSortedByName();
     QVBoxLayout * workspaceButtonsLayout = new QVBoxLayout;
     workspaceButtonsLayout->setSpacing ( 10 );
-    QLabel * workspaceLabel = new QLabel ( "<b>Available workspaces</b>" );
+    QLabel * workspaceLabel = new QLabel ( "<H2>Available workspaces</H2>" );
     workspaceLabel->setTextFormat(Qt::RichText);
     workspaceLabel->setAlignment(Qt::AlignHCenter);
     workspaceButtonsLayout->addWidget ( workspaceLabel );

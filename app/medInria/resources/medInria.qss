@@ -218,9 +218,9 @@ $LAYOUT_BUTTON_MIN_HEIGHT       = 32px;
 /*******************************************************************************
     FONT
  *******************************************************************************/
-$WIDGET_FONTSIZE                = 11px;
+$WIDGET_FONTSIZE                = 14px;
 
-$GROUP_BOX_FONTSIZE             = 9px;
+$GROUP_BOX_FONTSIZE             = 14px;
 
 
 /*******************************************************************************
@@ -296,6 +296,7 @@ QWidget
     background: $WIDGET_BACKGROUND;
     border: $WIDGET_BORDER;
     outline: 0px;
+    font-size: $WIDGET_FONTSIZE;
 }
 
 
@@ -554,6 +555,7 @@ QLabel
 {
     color: $EDITION_COLOR;
     background: none;
+    font-size: $WIDGET_FONTSIZE;
 }
 
 
