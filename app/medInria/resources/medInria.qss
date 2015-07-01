@@ -16,8 +16,8 @@
     COLOR
  *******************************************************************************/
 
-$HUE        = 220;
-$SATURATION = 10;
+$HUE        = 0;
+$SATURATION = 0;
 
 $GREY10     = hsv($HUE,$SATURATION,0);
 $GREY09     = hsv($HUE,$SATURATION,10);
@@ -31,53 +31,51 @@ $GREY02     = hsv($HUE,$SATURATION,80);
 $GREY01     = hsv($HUE,$SATURATION,90);
 $GREY00     = hsv($HUE,$SATURATION,100);
 
-$GREY11            = #e3ecf1; /*texts*/
-$HIGHLIGHT_COLOR   = #ED6639; /*highlight*/
-$DARKGRAY          = #2a416f; /*toolbox headers*/
-$MEDINRIA_DARKGRAY = #39548a; /*toolbox headers*/
-
 $ORANGE     = #fc875f; /*only in tooltip background*/
 $GREEN      = #64FF32; /*only in success progress bar*/
 $RED        = #FF3333; /*only in failure progress bar*/
 
+$TEXT       = white;
+$HIGHLIGHT  = $ORANGE;
+
 /*******************************************************************************
     BACKGROUND
  *******************************************************************************/
-$WIDGET_BACKGROUND                      = $GREY01;
+$WIDGET_BACKGROUND                      = $GREY06;
 
 $TOOLTIP_BACKGROUND                     = $YELLOW;
 
-$LIST_BACKGROUND                        = $GREY02;
-$ALT_LIST_BACKGROUND                    = $GREY03;
+$LIST_BACKGROUND                        = $GREY07;
+$ALT_LIST_BACKGROUND                    = $GREY08;
 
-$EDITION_BACKGROUND                     = $GREY06;
+$EDITION_BACKGROUND                     = $GREY07;
 
-$HEADER_BACKGROUND                      = qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1, stop: 0 $GREY01, stop: 1 $GREY00);
+$HEADER_BACKGROUND                      = $GREY08;
 
-$PROGRESS_BAR_BACKGROUND                = $GREY03;
+$PROGRESS_BAR_BACKGROUND                = $GREY07;
 
-$STATUS_BAR_BACKGROUND                  = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY06, stop: 1 $GREY05);
+$STATUS_BAR_BACKGROUND                  = $GREY06;
 
-$SLIDER_HORIZONTAL_BACKGROUND           = qradialgradient(cx: 0.5, cy: 0, fx: 0.5, fy: 0, radius: 1, stop: 0 $GREY07, stop: 1 $GREY04);
-$SLIDER_VERTICAL_BACKGROUND             = qradialgradient(cx: 0, cy: 0.5, fx: 0, fy: 0.5, radius: 1, stop: 0 $GREY07, stop: 1 $GREY04);
-$SLIDER_DISABLED_HORIZONTAL_BACKGROUND = qradialgradient(cx: 0.5, cy: 0, fx: 0.5, fy: 0, radius: 1, stop: 0 $GREY05, stop: 1 $GREY02);
-$SLIDER_DISABLED_VERTICAL_BACKGROUND   = qradialgradient(cx: 0, cy: 0.5, fx: 0, fy: 0.5, radius: 1, stop: 0 $GREY05, stop: 1 $GREY02);
+$SLIDER_HORIZONTAL_BACKGROUND           = $GREY05;
+$SLIDER_VERTICAL_BACKGROUND             = $GREY05;
+$SLIDER_DISABLED_HORIZONTAL_BACKGROUND  = $GREY02;
+$SLIDER_DISABLED_VERTICAL_BACKGROUND    = $GREY02;
 
-$PUSH_BUTTON_BACKGROUND                 = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY02, stop: 1 $GREY01);
-$PUSH_BUTTON_DISABLED_BACKGROUND        = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY05, stop: 1 $GREY04);
-$PUSH_BUTTON_HOVER_BACKGROUND           = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY07, stop: 1 $GREY06);
-$PUSH_BUTTON_CHECKED_BACKGROUND         = $GREY00;
-$PUSH_BUTTON_PRESSED_BACKGROUND         = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY02, stop: 1 $GREY01);
+$PUSH_BUTTON_BACKGROUND                 = $GREY06;
+$PUSH_BUTTON_DISABLED_BACKGROUND        = $GREY02;
+$PUSH_BUTTON_HOVER_BACKGROUND           = $GREY04;
+$PUSH_BUTTON_CHECKED_BACKGROUND         = $GREY08;
+$PUSH_BUTTON_PRESSED_BACKGROUND         = $GREY08;
 
-$COMBO_BOX_BACKGROUND                   = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY02, stop: 1 $GREY01);
-$COMBO_BOX_HOVER_BACKGROUND             = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY07, stop: 1 $GREY06);
-$COMBO_BOX_ITEM_BACKGROUND              = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY07, stop: 1 $GREY06);
-$COMBO_BOX_ITEM_SELECTED_BACKGROUND     = $GREY00;
+$COMBO_BOX_BACKGROUND                   = $GREY06;
+$COMBO_BOX_HOVER_BACKGROUND             = $GREY04;
+$COMBO_BOX_ITEM_BACKGROUND              = $GREY06;
+$COMBO_BOX_ITEM_SELECTED_BACKGROUND     = $GREY02;
 
-$TAB_BACKGROUND                         = qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 $GREY02, stop: 1 $GREY01);
-$TAB_HOVER_BACKGROUND                   = qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 $GREY07, stop: 1 $GREY06);
-$TAB_PRESSED_BACKGROUND                 = qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 $GREY05, stop: 1 $GREY04);
-$TAB_SELECTED_BACKGROUND                = $GREY04;
+$TAB_BACKGROUND                         = $GREY06;
+$TAB_HOVER_BACKGROUND                   = $GREY04;
+$TAB_PRESSED_BACKGROUND                 = $GREY01;
+$TAB_SELECTED_BACKGROUND                = $GREY02;
 
 $SCROLL_BAR_HORIZONTAL_BACKGROUND       = $GREY04;
 $SCROLL_BAR_VERTICAL_BACKGROUND         = $GREY04;
@@ -85,21 +83,21 @@ $SCROLL_BAR_VERTICAL_BACKGROUND         = $GREY04;
 $HOME_PAGE_BUTTON_BACKGROUND            = $GREY03;
 $HOME_PAGE_BUTTON_HOVER_BACKGROUND      = $GREY00;
 
-$TOOLBOX_CONTAINER_BACKGROUND           = $GREY01;
-$TOOLBOX_HEADER_BACKGROUND              = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY02, stop: 1 $GREY00);
-$TOOLBOX_BODY_BACKGROUND                = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY02, stop: 1 $GREY01);
-$TOOLBOX_BACKGROUND                     = $GREY04;
+$TOOLBOX_CONTAINER_BACKGROUND           = $GREY05;
+$TOOLBOX_HEADER_BACKGROUND              = $GREY00;
+$TOOLBOX_BODY_BACKGROUND                = $GREY06;
+$TOOLBOX_BACKGROUND                     = $GREY07;
 
-$VIEW_PROPERTY_BACKGROUND               = $GREY03;
-$VIEW_PROPERTY_HEADER_BACKGROUND        = qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1, stop: 0 $GREY01, stop: 1 $GREY00);
-$VIEW_PROPERTY_ALT_BACKGROUND           = $GREY02;
+$VIEW_PROPERTY_BACKGROUND               = $GREY07;
+$VIEW_PROPERTY_HEADER_BACKGROUND        = $GREY00;
+$VIEW_PROPERTY_ALT_BACKGROUND           = $GREY06;
 
-$FINDER_PATH_BAR_BACKGROUND             = qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1, stop: 0 $GREY01, stop: 1 $GREY00);
+$FINDER_PATH_BAR_BACKGROUND             = $GREY01;
 
 $CONTAINER_BACKGROUND                   = $GREY04;
 $VIEW_CONTAINER_BUTTON_HOVER_BACKGOUND  = $GREY10;
 
-$MENU_ITEM_HOVER_BACKGROUND             = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY00, stop: 1 $GREY01);
+$MENU_ITEM_HOVER_BACKGROUND             = $GREY01;
 $MENU_ITEM_BACKGROUND                   = $GREY05;
 $MENU_ITEM_SELECTED_BACKGROUND          = $GREY00;
 
@@ -113,15 +111,15 @@ $FILE_SYSTEM_INFO_TEXT_BACKGROUND       = $GREY03;
 
 $DROP_SITE_BACKGROUND                   = $GREY01;
 
-$QUICK_ACCESS_MENU_HEADER_BACKGROUND     = qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 $GREY00, stop: 1 $GREY01);
+$QUICK_ACCESS_MENU_HEADER_BACKGROUND     = $GREY00;
 
-$QUICK_ACCESS_MENU_BACKGROUND            = rgba(200,200,200,150);
+$QUICK_ACCESS_MENU_BACKGROUND            = $GREY02;
 
 
 /*******************************************************************************
     WIDGET COLOR
  *******************************************************************************/
-$WIDGET_COLOR                       = $GREY11;
+$WIDGET_COLOR                       = $TEXT;
 
 $TOOLTIP_COLOR                      = $GREY04;
 
@@ -129,35 +127,35 @@ $DISABLE_COLOR                      = $GREY07;
 
 $GRIDLINE_COLOR                     = $GREY09;
 
-$EDITION_COLOR                      = $GREY11;
+$EDITION_COLOR                      = $TEXT;
 
-$HEADER_COLOR                       = $GREY11;
+$HEADER_COLOR                       = $TEXT;
 
 $PROGRESS_BAR_COLOR                 = $HIGHLIGHT_COLOR;
 
 $PROGRESS_BAR_TEXT_COLOR            = $GREY00;
 
-$SLIDER_COLOR                       = qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 1, stop: 0 $GREY11, stop: 1 $GREY10);
-$SLIDER_DISABLED_COLOR              = qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 1, stop: 0 $GREY07, stop: 1 $GREY08);
+$SLIDER_COLOR                       = $TEXT;
+$SLIDER_DISABLED_COLOR              = $GREY01;
 
 $COMBO_BOX_ITEM_SELECTED_COLOR      = $HIGHLIGHT_COLOR;
 
 $MENU_ITEM_SELECTED_COLOR           = $HIGHLIGHT_COLOR;
 
-$GROUP_BOX_COLOR                    = $GREY11;
+$GROUP_BOX_COLOR                    = $TEXT;
 
 $TAB_SELECTED_COLOR                 = $HIGHLIGHT_COLOR;
-$TAB_COLOR                          = $GREY11;
-$TAB_HOVER_COLOR                    = $GREY11;
+$TAB_COLOR                          = $TEXT;
+$TAB_HOVER_COLOR                    = $TEXT;
 
-$SCROLL_BAR_HORIZONTAL_COLOR        = qradialgradient(cx: 0.5, cy: 0, fx: 0.5, fy: 0, radius: 1, stop: 0 $GREY08, stop: 1 $GREY11);
-$SCROLL_BAR_VERTICAL_COLOR          = qradialgradient(cx: 0, cy: 0.5, fx: 0, fy: 0.5, radius: 1, stop: 0 $GREY08, stop: 1 $GREY11);
+$SCROLL_BAR_HORIZONTAL_COLOR        = $GREY08;
+$SCROLL_BAR_VERTICAL_COLOR          = $GREY08;
 
 $HOMEPAGE_TEXT_COLOR                = $GREY06;
 
-$TOOLBOX_HEADER_COLOR               = $GREY11;
+$TOOLBOX_HEADER_COLOR               = $TEXT;
 
-$VIEW_PROPERTY_COLOR                = $GREY11;
+$VIEW_PROPERTY_COLOR                = $TEXT;
 $VIEW_PROPERTY_ITEM_COLOR           = $WIDGET_COLOR;
 $VIEW_PROPERTY_ITEM_SELECTED_COLOR  = $COMBO_BOX_ITEM_SELECTED_COLOR;
 
@@ -282,7 +280,7 @@ $VIEW_CONTAINER_BUTTON_PADDING  = 4px 2px;
 
 $ADD_TAB_BUTTON_PADDING         = 8px 0px;
 
-$TOOLBOX_HEADER_PADDING         = 0px 8px;
+$TOOLBOX_HEADER_PADDING         = 2px 8px;
 
 $FILE_SYSTEM_INFO_TEXT_PADDING  = 2px 5px;
 
@@ -1082,7 +1080,7 @@ QLabel#quickAccessMenuHeader
 medQuickAccessMenu
 {
     background-color: $QUICK_ACCESS_MENU_BACKGROUND;
-    border-radius: $QUICK_ACCESS_MENU_RADIUS;
+    border-radius: 0px;
 }
 
 /*******************************************************************************
@@ -1112,6 +1110,10 @@ medToolBoxHeader
     color: $TOOLBOX_HEADER_COLOR;
     min-height: $TOOLBOX_HEADER_HEIGHT;
     padding: $TOOLBOX_HEADER_PADDING;
+    font-weight: bold;
+    margin: 2px;
+    border: 2px;
+    border-radius: 5px;
 }
 
 
