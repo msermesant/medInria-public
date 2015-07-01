@@ -172,7 +172,7 @@ int medDatabaseView::sizeHintForColumn(int column) const
 {
     if (column < 0 || column > this->model()->columnCount()) return 100;
 
-    return this->fontMetrics().width(this->model()->headerData(column, Qt::Horizontal, Qt::DisplayRole).toString()) + 40;
+    return this->fontMetrics().width(this->model()->headerData(column, Qt::Horizontal, Qt::DisplayRole).toString()) + 60;
 }
 
 void medDatabaseView::setModel(QAbstractItemModel *model)
